@@ -42,6 +42,7 @@ private extension MCalendarView {
             .padding(.bottom, configData.monthsPadding.bottom)
             .background(configData.monthsViewBackground)
         }
+        .scrollTargetBehavior(.paging)
         .onAppear() { scrollToDate(reader, animatable: false) }
         .onChange(of: configData.scrollDate) { _ in scrollToDate(reader, animatable: true) }
     }}
