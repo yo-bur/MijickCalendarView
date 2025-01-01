@@ -34,7 +34,7 @@ private extension MCalendarView {
         configData.weekdaysView().erased()
     }
     func createScrollView() -> some View { ScrollViewReader { reader in
-        ScrollView(showsIndicators: false) {
+        ScrollView([.vertical], showsIndicators: false) {
             LazyHStack(spacing: configData.monthsSpacing) {
                 ForEach(monthsData, id: \.month, content: createMonthItem)
             }
