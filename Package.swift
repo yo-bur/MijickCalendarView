@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "MijickCalendarView",
     platforms: [
-        .iOS(.v17),
+        .iOS(.v14),
         .macOS(.v11),
         .watchOS(.v7)
     ],
